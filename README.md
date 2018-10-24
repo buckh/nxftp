@@ -1,5 +1,5 @@
 # nxftp
-NXftp is an X/Motif wrapper around the ftp command line that I wrote in 1993.
+NXftp is an X/Motif wrapper around the ftp command line that I wrote that started as a class project in 1992.
 ----
 
 
