@@ -2,13 +2,12 @@
 NXftp is an X/Motif wrapper around the ftp command line that I wrote in 1993.
 
 
-
 NOTE:  Even if you don't want to read anything, READ the INSTRUCTIONS
        section at the end because it will tell you how to set up the 
        program to use the name of your network and the help and site
        list files.
 
-
+<pre>
 **********************************************************************
    OO    O   OOOOO   OOOO   O    O     The North Carolina State
    O O   O  O       O       O    O     University Motif Group
@@ -168,3 +167,4 @@ INSTRUCTIONS
         Note:  After August 1993, I will be a graduate student at Univ. of
                Ill. at Urbana-Champaign, so the email address is not valid
                for much longer.
+</pre>
