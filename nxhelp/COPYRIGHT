@@ -1,0 +1,71 @@
+**********************************************************************
+   OO    O   OOOOO   OOOO   O    O     The North Carolina State
+   O O   O  O       O       O    O     University Motif Group
+   O  O  O  O        OOOO   O    O     NCSU Box 8206
+   O   O O  O            O  O    O     Raleigh, NC 2695-8206
+   O    OO   OOOOO   OOOO    OOOO
+
+   O     O  OOOO  OOOOOOO O  OOOOO      OOOO  OOOO   OOO  O    O OOOO
+   OO   OO O    O    O    O  O         O    O O   O O   O O    O O   O
+   O O O O O    O    O    O  OOOOO     O      OOOO  O   O O    O OOOO
+   O  O  O O    O    O    O  O         O  OOO O O   O   O O    O O
+   O     O O    O    O    O  O         O    O O  O  O   O O    O O 
+   O     O  OOOO     O    O  O          OOOO  O   O  OOO   OOOO  O
+ **********************************************************************
+
+   Title: NXHelp
+
+   File name: nxhelp.c NXHelp.h NXHelp.icn demo.c demo.hlp
+   File Type: Code
+
+   Lead Programmer: Lance Lovette (ltlovett@eos.ncsu.edu)
+ 
+   Testing by: Lance Lovette
+
+   Version: 1.2
+   Date   : 3/24/92
+
+   Description: 
+	NXHelp is a help facility that can easily be added to any
+        Motif program. When activated, NXHelp displays an index of
+        help topics. Once the user has chosen a topic, the text
+        information on that topic is displayed.  Topics can also
+	be selected from help callbacks within the application.
+
+   Author's notes:
+	Destined to be one day a global help facility for all programs
+	incorporating this into their application.
+
+   System Information:
+        This text and code is based on the OSF/Motif widget set version
+        1.1 and the X Window System version 4.
+
+   About the NCSU Motif Group:
+        The NCSU Motif Group is a group of students at North Carolina
+        State University who meet once a week to discuss Motif programming.
+        Individual projects are used to help students learn Motif. 
+        These projects are then released onto the network to help others.
+        All released code is available at our anonymous FTP site:
+        osl.csc.ncsu.edu, in the directory pub/ncsu_motif.  Questions 
+        and comments should be directed to the lead programmer for the 
+        project in question, or to the faculty advisor, Marshall Brain, 
+        at brain@eos.ncsu.edu.
+
+   Copyright Information:
+        Copyright 1992 by Lance Lovette
+        All Rights Reserved
+
+        Permission to use, copy, and distribute this software and text for
+        non-commercial purposes and without fee is hereby granted, provided 
+        that this notice appears in all copies.
+
+        The author disclaims all warranties with regard to the software or 
+        text including all implied warranties of merchantability and fitness.
+
+        In no event shall the author or NCSU be liable for any special,
+        indirect or cosequential damages or any damages whatsoever 
+        resulting from loss of use, data or profits, whether in an 
+        action of contract, negligence or other tortious action, 
+        arising out of or in connection with the use or performance 
+        of this software or text.
+

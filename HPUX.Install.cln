@@ -1,0 +1,30 @@
+This program uses the "ftp" program installed on your system rather than
+making use of sockets directly. I have managed to get this working for 
+several FTP sites though expect some strange behaviour.
+
+To install:
+
+Edit ftp.c and change SITE_LIST and HELP_FILE to reflect where you will install
+these files. By default they will be installed into $(LIBDIR)/nxftp by the
+Imakefile. Also edit EMAIL_ID in ftpcomm.c with the name of your domain.
+
+Then:
+
+xmkmf
+make
+make install
+make clean
+
+There is no man page with this package though there is online help available
+using the nxhelp package.
+
+Rik.
+
+===============================================================================
+ Richard Turnbull                     |         HP-UX Porting & Archive Centre 
+                                      |                    [ftp.csc.liv.ac.uk]
+ E-Mail: rik@csc.liv.ac.uk            |                 Dept. Computer Science 
+ FAX: (051) 794 3715                  |                University of Liverpool
+ Office Phone: (051) 794 3704         |                     Liverpool  L69 3BX
+ Dept   Phone: (051) 794 6923         |                                England 
+===============================================================================

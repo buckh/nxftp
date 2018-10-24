@@ -1,0 +1,198 @@
+[-NXHelpFile NXftp ver 3.1-]
+/*
+ * NXftp - help file
+ *      Version 3.1, 10/11/92 - 6/8/93
+ *      by Eugene Hodges
+ *      Code and display Copyright 1992, 1993 by Eugene Hodges.
+ *      All Rights Reserved
+ */
+<About NXftp>
+
+
+                                      NXFtp 3.1
+
+                                    by Buck Hodges
+                         Copyright 1992,1993 by Eugene W. Hodges
+
+               Send comments, suggestions, problems to ewhodges@eos.ncsu.edu
+
+
+                    The help facility (NXHelp 1.1) is copyright 1992 by 
+                          Lance Lovette (ltlovett@eos.ncsu.edu).
+
+<!>
+<Introduction>
+
+   NXFtp is a graphical user's interface to the already existing ftp program.
+NXFtp will allow you to perform nearly all functions with just the use of the
+mouse.  The user thus need not be familiar with the error codes and technical
+aspects of communicating using the ftp program.  NXFtp is intended for those
+who wish to download (get) files from other sites, especially the so called
+"anonymous sites."
+
+<!>
+<Connecting to a Site>
+                                Connecting to a Site
+
+   To connect to a site, select 'Control -> Connect.'  This will bring up a 
+dialog which prompts you for a site name, user name (login id), and a password.
+You must enter the complete site name for a connection to be established.  If 
+you do choose to enter an abbreviated site name, it must be recognizable to
+the standard ftp command.
+
+   Also, if you have created a custom site list, you may simply click on a site
+name in the list to enter the site name.
+
+   Once you have entered a site name, you may either manually type in the user
+name and password (which WILL NOT be invisible) or click on 'Anonymous Login.'
+If the site you to which you wish to connect is one on which you have an
+account, you should type in the user name and password and then click on 'OK.'
+If you wish to connect to an anonymous site, you may simply click on
+'Anonymous Login'; the program will then automatically put the word "anonymous"
+in the user name and your email address in the password, as is conventional with
+the connection procedure for an anonymous site, and attempt to connect to the 
+site.
+
+   If the site is unknown or ftp is unable to connect to the network, it will
+notify you with an error message.  The program has a 25 second timer for
+connecting to a site.  If after 25 seconds no connection is made for some
+reason, you will be notified with an error message.
+
+<   Custom Site List>
+                                  Custom Site List
+
+   The custom site list feature allows you to form a list of sites that you wish
+to have readily available.  This list is saved to your home directory in a file
+called .nxftprc, allowing the list to be pulled up each time you run the
+program.
+
+   To form a custom site list, select 'Control -> Connect' and click on the 
+'Edit List' button.  This will bring up a dialog with your existing custom site
+list and a large anonymous site list.  To add an entry to the site list,
+either copy from the large list (which is a text area like that used in Ted,
+just not editable) or manually type a site name into the text box under the
+label "Site To Add."  Then click on the 'Add to List' button.  This adds the
+site to your custom list.  After you are finished adding site names to the
+list, click on the 'Save' button to save the list to the .nxftprc file.
+
+   To remove a site name from the list, double click on the site name in the
+list under "User Site List" and then click on the 'Remove from List' button. 
+To save the changes that you make, click on the 'Save' button.
+
+   The 'Save' button does not close the dialog; it only save the list to a
+file.  To exit the dialog, click on the 'Cancel' button.  Also, to show you
+when you have saved the list, the 'Save' button will "grey-out" until you
+either add or remove a site from the list.
+
+<Disconnecting from a Site>
+                              Disconnecting from a Site
+
+   To disconnect from the current site, select 'Control -> Disconnect.'  This 
+will close the connection to the site and allow you to login into another site
+by choosing 'Control -> Login.'
+
+<Changing the Download Directory>
+
+                            Changing the Download Directory
+
+   To change the directory in which the files received will be placed, select
+'Control -> Change Download Dir.'  This will bring up a dialog with the current
+download directory in it.  Just modify the path to become the path you desire 
+and click on 'OK.'  You may cancel any changes by clicking on 'Cancel.'  The
+download directory is always kept as set in this dialog, even after 
+disconnecting from the current site and connecting to a new one.
+
+<File Size>
+                                    File Size
+
+   The file size (if available from the site with the command ls -l) is shown
+as a column of integers to the left of file names and directories in their
+respective lists.  This integer represents the size of the file in kilobytes
+and is rounded to the nearest kilobyte.
+
+<Changing the Current Site Directory>
+                          Changing the Current Site Directory
+
+   To change the current site directory, double click on a directory name in
+the 'Site Directories' list.  The program will attempt to change to that
+directory and will respond with an error message if it cannot get into that 
+directory.  If successful, it will show the files in the directory in the 'Site
+Files' list and the subdirectories in 'Site Directories.'
+
+   The directory name '../' is special and is interpreted as it is regularly--
+it is the parent directory of the current directory.
+
+<Getting a File>
+                                    Getting a File
+
+   To get a file from the site, select a file in the list titled 'Site Files' by
+double clicking on the name of the file.  A dialog will then appear to prompt
+you to select 'Binary' or 'ASCII' file transfer and allow you read the file you
+have selected if it is a text file.  If the file is not a plain text file,
+your best bet is to choose 'Binary' for the method of file transfer by clicking
+on the diamond-shaped button to the left of the word 'Binary.'  If you have 
+problems with one mode, try the other.
+
+   If the file is a plain text file or is a compressed (text file with .Z
+extension) plain text file, you may read the file by clicking on 'Read Text
+File.'  This will bring up a dialog with the contents of the file in it.  This
+does NOT download the file to your download directory.  It simply allows you to
+read the file.  You may wish to leave the dialog up for future reference (it 
+does not go away until you click on 'Dismiss') but may wish to move it over to
+the side.
+
+
+Note:  A file that has the .tar extension in its file name cannot be read by
+       'Read Text File' even if it is only a tar of text files.  Get the file
+       from the site and "untar" it by typing 'tar xvof filename' at the 
+       prompt in your xterm.
+
+<   Binary or ASCII?>
+                                   Binary or ASCII?
+
+   If the file is not a plain text file, your best bet is to choose 'Binary' 
+for the method of file transfer by clicking on the diamond-shaped button to the
+left of the word 'Binary' (in the dialog that appears after double clicking on
+a file name in the 'Site Files' list).  If you have problems with one mode, try
+the other.
+
+<   Reading a Text File Online>
+                              Reading a Text File Online
+
+   If the file is a plain text file or is a compressed (text file with .Z
+extension) plain text file, you may read the file by clicking on 'Read Text
+File.'  This will bring up a dialog with the contents of the file in it.  This
+does NOT download the file to your download directory.  It simply allows you to
+read the file.  You may wish to leave the dialog up for future reference (it 
+does not go away until you click on 'Dismiss') but may wish to move it over to
+the side.
+
+   If you are using the Motif Window Manager, you may move the dialog by
+holding the Meta key (usually labeled 'Compose Character' on DECstations) down
+and pressing the first mouse button while the mouse pointer is in the dialog.
+
+
+Note:  A file that has the .tar extension in its file name cannot be read by
+       'Read Text File' even if it is only a tar of text files.  Get the file
+       from the site and "untar" it by typing 'tar xvof' at the prompt in your
+       xterm.
+
+<   File Size>
+                                    File Size
+
+   The file size (if available from the site with the command ls -l) is shown
+as a column of integers to the left of file names and directories in their
+respective lists.  This integer represents the size of the file in kilobytes
+and is rounded to the nearest kilobyte.
+
+<Verbose Information>
+                              Verbose Information
+
+   If you actually (for some reason or another) want to see everything that is 
+coming out of the sight as the program is running, select 'Control -> Verbose.'
+This will bring up a dialog to display the information.  Doing this will
+slightly slow the program down due to the fact that the dialog must also be
+updated.  If you do not have the dialog up (do not select it from the menu or
+dismiss it), the program does not update the dialog and is not slowed down.
+
+<END>

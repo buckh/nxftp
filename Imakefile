@@ -1,0 +1,56 @@
+#
+# Imakefile for nxftp
+#    type 'xmkmf' and then 'make' to compile nxftp
+#
+# REMEMBER:
+#
+#        For this program to function properly, change 5 things:
+#
+#       *  1.  The #define SITE_LIST in ftp.c to the location it will have on
+#              your system
+#       *  2.  The #define HELP_FILE in ftp.c to the location it will have on
+#              your system
+#       *  3.  The #define GetPath() (a macro) in ftp.c must be changed to 
+#              something that will determine the path for the custom site list
+#              that each user can have (must be in the user's directory).
+#       *  4.  The #define EMAIL_ID in ftpcomm.c to the name of your system 
+#              (email address).
+#       *  5.  The DEFINES = -DNO_AFS should be uncommented for systems without
+#              AFS (otherwise, nxftp will attempt to execute "fs lq").
+
+#ifdef HPArchitecture
+      CCOPTIONS = -Ae -w -I. -I/usr/include/Motif1.2
+   DEPXMOTIFLIB =  /usr/lib/Motif1.2/libXm.a
+      XMOTIFLIB =  -L/usr/lib/Motif1.2 -lXm
+#else
+   DEPXMOTIFLIB =  $(USRLIBDIR)/libXm.a
+      XMOTIFLIB =  -lXm
+#endif
+
+#comment the DEFINES statement out if your system is running AFS
+#  and has the command 'fs lq' to determine a directory's remaining
+#  free disk space
+        DEFINES = -DNO_AFS
+#        DEFINES = -DDEBUG
+
+      DATAFILES = anon_ftp_sites nxftp.hlp
+LOCAL_LIBRARIES = $(XMOTIFLIB) $(XTOOLLIB) $(XLIB)
+  SYS_LIBRARIES = 
+           SRCS = ftp.c ftpcomm.c link.c ./nxhelp/nxhelp.c
+           OBJS = ftp.o ftpcomm.o link.o nxhelp.o
+       PROGRAMS = nxftp
+
+ComplexProgramTarget(nxftp)
+InstallMultipleDestFlags(install,$(DATAFILES),$(LIBDIR), $(INSTDATFLAGS))
+
+install::
+	chmod -R a+rx /opt/nxftp
+
+
+
+nxhelp.o:  ./nxhelp/NXHelp.h
+	$(CC) -c $(CFLAGS) ./nxhelp/nxhelp.c
+
+ftp.o:     ftp.h ftpcomm.h link.h global.h
+ftpcomm.o: ftpcomm.h link.h global.h
+link.o:    link.h ftp.h global.h

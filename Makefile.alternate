@@ -1,0 +1,19 @@
+CC = cc
+
+# Add a -DNO_QUOTA if your system is not an AFS system with the command quota
+# or fs lq.
+CFLAGS = -O
+
+OBJS = ftp.o ftpcomm.o link.o nxhelp.o
+
+LIBS = -lXm -lXt -lX11
+
+/tmp/nxftp: $(OBJS)
+	$(CC) $(LDFLAGS) -o  /tmp/nxftp $(OBJS) $(LIBS)
+
+nxhelp.o: ./nxhelp/nxhelp.c
+	$(CC) -c ./nxhelp/nxhelp.c
+
+ftpcomm.o:      ftpcomm.h link.h
+link.o:         link.h
+ftp.o:          ftpcomm.h 

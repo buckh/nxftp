@@ -1,0 +1,26 @@
+[-NXHelpFile Demo ver 1.0-]
+/*
+ * NXHelp - demo.hlp
+ *      by Lance Lovette
+ *      Code and display copyright 1992, by Lance Lovette.
+ *      All Rights Reserved
+ */
+<Overview>
+       This is the help text associated with Overview.
+
+<!>
+
+<About>
+This is the help text associated with About.
+It is also called from the keyword 'Deferred'.
+Which allows 2 or more keywords reference the same
+text.
+
+<Heading->
+<  Deferred>=About
+
+<.Hidden>
+This help keyword is hidden from the index list,
+but is available from a callback.
+
+<END>

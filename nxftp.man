@@ -1,0 +1,44 @@
+.TH NXFTP l   12/2/1999
+.SH NAME
+nxftp \- NXftp is a Motif front end for the standard ftp command in Unix.
+.SH SYNOPSIS
+\fBnxftp\fP [size-options]
+.SH DESCRIPTION
+
+It allows the user to double click on a directory name to change
+directories, on a file to download or read it online if it is text,
+and change the directory in which files are placed.  This is a much
+needed change for the ftp user.  Furthermore, it allows the user to 
+easily create custom site lists to prevent having to re-enter the site
+names commonly used.
+
+
+
+.SH RUNNING
+    Type 
+		xmkmf
+		make
+
+.SH  NEW FEATURES
+
+*  Interface has been reorganized -- better display of info!!
+*  The custom user list is sorted
+*  Much better stability and compatibility with sites
+*  Symbolic links in the site dir are properly separated into files
+and directories
+*  Remaining disk space function works with both AFS and non-AFS
+Unix systems now
+*  Improved error messages
+
+
+
+.SH AUTHOR
+
+- Eugene Hodges
+     ewhodges@eos.ncsu.edu
+
+.SH MAN PAGE
+
+- Mehdi Lavasani
+     lavasani@csc.liv.ac.uk
+

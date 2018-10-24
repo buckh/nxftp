@@ -1,0 +1,59 @@
+Package name:     nxftp
+Version number:   3.1a
+Original author:  N/A <(ewhodges@eos.ncsu.edu)>
+Original URL:     http://ltpwww.gsfc.nasa.gov/ltpcf/about/unix/Depotdoc/
+HP-UX URL:        http://hpux.connect.org.uk/hppd/cgi-bin/search?package=&term=nxftp-
+Install tree:     /opt/nxftp
+Report bugs to:   lavasani@connect.org.uk
+Tested on:        HP 9000/780/C160 running HP-UX 11.00
+C compiler used:  Version A.11.01.21505.GP
+Purpose:
+NXftp is a Motif front end for the standard ftp command. It allows the user to
+double click on a directory name to change directories, on a file to download
+or read it online if it is text, and change the directory in which files are
+placed. This is a much needed change for the ftp user. Furthermore, it allows
+the user to easily create custom site lists to prevent having to re-enter the
+site names commonly used.
+Date archived:    Thu  1 Feb 2001
+
+-------------------------------------------------------------------------------
+
+http://ltpwww.gsfc.nasa.gov/ltpcf/about/unix/Depotdoc/
+
+This program uses the "ftp" program installed on your system rather than
+making use of sockets directly. I have managed to get this working for 
+several FTP sites though expect some strange behaviour.
+Added:
+man_page (nxftp.man)
+
+To install:
+
+Edit ftp.c and change *SITE_LIST* and *HELP_FILE* to reflect the location
+of these file when installed. By default they will be installed into 
+$(LIBDIR)/nxftp by the Imakefile. Also edit EMAIL_ID in ftpcomm.c with 
+the name of your domain.
+
+Then:
+
+xmkmf
+make
+make install
+make clean
+
+
+===============================================================================
+ Richard Turnbull                     |         HP-UX Porting & Archive Centre 
+                                      |                    [ftp.csc.liv.ac.uk]
+ E-Mail: rik@csc.liv.ac.uk            |                 Dept. Computer Science 
+ FAX: (051) 794 3715                  |                University of Liverpool
+ Office Phone: (051) 794 3704         |                     Liverpool  L69 3BX
+ Dept   Phone: (051) 794 6923         |                                England 
+===============================================================================
+
+lavasani
+stephie <Wed Jan 31 16:44:45 GMT 2001>
+
+Porting changes for HPUX-11.00
+
+  Commented out the old prototypes in ./strings.h.
+  Made sure the installed is globally readable.
