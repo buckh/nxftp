@@ -1,3 +1,5 @@
+[![Build Status](https://bucktest.visualstudio.com/nxftp/_apis/build/status/buckh.nxftp)](https://bucktest.visualstudio.com/nxftp/_build/latest?definitionId=2)
+
 # nxftp
 NXftp is an X/Motif wrapper around the ftp command line that I wrote that started as a class project in 1992.
 ----
