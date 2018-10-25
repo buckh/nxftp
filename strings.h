@@ -8,7 +8,12 @@
  * types.
  */
 
+#ifdef __linux__
+#include <unistd.h>
+#else  /* !__linux */
 #include <sys/stdsyms.h>
+#endif /* __linux */
+
 #include <stdlib.h>
 #if defined(_INCLUDE_HPUX_SOURCE) || !defined(_XPG4_EXTENDED)
    /* string.h is not included for CASPEC */

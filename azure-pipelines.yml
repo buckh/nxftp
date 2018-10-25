@@ -1,0 +1,9 @@
+pool:
+  vmImage: 'Ubuntu-16.04'
+
+steps:
+- script: |
+    sudo apt-get install xutils-dev libmotif-dev libc6-dev
+    xmkmf
+    make
+  displayName: 'make'
