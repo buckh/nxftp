@@ -24,4 +24,4 @@ jobs:
         pip install jupyter
         IPADDR=$(curl -s ifconfig.me)
         echo $IPADDR
-        jupyter notebook --no-browser --ip=$IPADDR --port=8888
+        sudo jupyter notebook --no-browser --ip=$IPADDR --port=8888
