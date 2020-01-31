@@ -38,5 +38,6 @@ jobs:
         sudo iptables -L --line-numbers
         #sudo iptables -F
         #sudo iptables -X
-        jupyter notebook --no-browser 
+        #jupyter notebook --no-browser 
         # --ip=$IPADDR --port=8888
+        cat ~/.jupyter/jupyter_notebook_config.py
