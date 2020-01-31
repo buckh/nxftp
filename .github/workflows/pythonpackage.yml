@@ -24,4 +24,7 @@ jobs:
         pip install jupyter
         IPADDR=$(curl -s ifconfig.me)
         echo $IPADDR
+        jupyter notebook --generate-config
+        echo "c.NotebookApp.allow_origin = '*'" >> ~/.jupyter/jupyter_notebook_config.py
+        echo "c.NotebookApp.ip = '0.0.0.0'" >> ~/.jupyter/jupyter_notebook_config.py
         sudo jupyter notebook --no-browser --ip=$IPADDR --port=8888
