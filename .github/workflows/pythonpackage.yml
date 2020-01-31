@@ -31,8 +31,8 @@ jobs:
         sudo iptables -P OUTPUT ACCEPT
         sudo iptables -t nat -F
         sudo iptables -t mangle -F
-        sudo iptables -F
-        sudo iptables -X
+        #sudo iptables -F
+        #sudo iptables -X
         sudo iptables -L -n
         jupyter notebook --no-browser 
         # --ip=$IPADDR --port=8888
