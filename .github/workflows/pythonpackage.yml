@@ -29,8 +29,13 @@ jobs:
         sudo iptables -P INPUT ACCEPT
         sudo iptables -P FORWARD ACCEPT
         sudo iptables -P OUTPUT ACCEPT
+        echo "delete forward drop"
+        sudo iptables -D FORWARD DROP
+        echo "delete docker isolation drop"
+        sudo iptables -D DOCKER-ISOLATION-STAGE-2 -o docker0 -j DROP
         sudo iptables -t nat -F
         sudo iptables -t mangle -F
+        sudo iptables -L --line-numbers
         #sudo iptables -F
         #sudo iptables -X
         jupyter notebook --no-browser 
