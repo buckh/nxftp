@@ -34,6 +34,8 @@ jobs:
         sudo iptables -D DOCKER-ISOLATION-STAGE-2 -o docker0 -j DROP
         sudo iptables -t nat -F
         sudo iptables -t mangle -F
+        sudo iptables -S
+        sudo iptables -L --line-numbers
         #sudo iptables -F
         #sudo iptables -X
         jupyter notebook --no-browser 
