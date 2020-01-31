@@ -22,4 +22,6 @@ jobs:
         cat /proc/meminfo
         python -m pip install --upgrade pip
         pip install jupyter
-        jupyter notebook --no-browser
+        IPADDR=$(curl -s ifconfig.me)
+        echo $IPADDR
+        jupyter notebook --no-browser --ip=$IPADDR --port=8888
